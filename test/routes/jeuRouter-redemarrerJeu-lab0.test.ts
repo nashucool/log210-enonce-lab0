@@ -8,13 +8,6 @@ import { Joueur } from '../../src/core/joueur';
 
 const request = supertest(app);
 
-
-describe('redemarrerJeu.test.ts', () => {
-  it("devrait implémenter test", async () => {
-    throw new Error("Ce test n'a pas été défini")
-  });
-});
-
 describe('GET /api/v1/jeu/redemarrerJeu', () => {
   let joueur1 : Joueur
   let joueur2: Joueur
