@@ -11,9 +11,9 @@ describe('JeuDeDesTest', () => {
     expect(jdd.joueurs).toEqual("[]")
   })
 
-  it('devrait retourner une valeur entre 2 et 12', () => {
+  it('devrait retourner une valeur entre 3 et 36', () => {
     for (let i = 0; i < 200; i++) {
-      expect(jdd.brasser()).toBeWithin(2, 13);
+      expect(jdd.brasser()).toBeWithin(3, 36);
     }
   })
 
@@ -22,13 +22,13 @@ describe('JeuDeDesTest', () => {
     for (let i = 0; i < 200; i++) {
       resultats.add(jdd.brasser())
     }
-    expect(resultats.size).toBe(11);
-    for (let i = 1; i < 12; i++) {
+    expect(resultats.size).toBe(15);
+    for (let i = 1; i < 16; i++) {
       expect(resultats.has(i + 1)).toBeTrue();
     }
     // cas particuliers
     expect(resultats.has(1)).toBeFalsy();
-    expect(resultats.has(13)).toBeFalsy();
+    expect(resultats.has(37)).toBeFalsy();
   })
 
 });
